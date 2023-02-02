@@ -6,7 +6,7 @@
 #    By: albrusso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 16:21:18 by albrusso          #+#    #+#              #
-#    Updated: 2023/02/02 16:03:59 by albrusso         ###   ########.fr        #
+#    Updated: 2023/02/02 16:23:53 by albrusso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,14 +67,17 @@ $(NAME_MANDATORY): $(OBJ_MANDATORY)
 
 bonus: $(OBJ_BONUS)
 			cc $(FLAGS) $(OBJ_BONUS) -o checker
+			@echo "$(GREEN) checker compiled!$(DEF_COLOR)"
 
 clean:
 		rm -f $(OBJ_MANDATORY) $(OBJ_BONUS)
 		@echo "$(BLUE)push_swap object files cleaned!$(DEF_COLOR)"
+		@echo "$(BLUE)checker object files cleaned!$(DEF_COLOR)"
 
 fclean:	clean
 		rm -f $(NAME_MANDATORY) checker
 		@echo "$(CYAN)push_swap executable files cleaned!$(DEF_COLOR)"
+		@echo "$(CYAN)checker executable files cleaned!$(DEF_COLOR)"
 re:	fclean all
 
 PHONY:		all clean fclean re
