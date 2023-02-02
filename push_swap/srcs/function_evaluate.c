@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:07:40 by albrusso          #+#    #+#             */
-/*   Updated: 2023/01/30 14:27:51 by albrusso         ###   ########.fr       */
+/*   Updated: 2023/02/02 15:22:54 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_set_topush(t_value *a, int number)
 		temp = a->lst;
 		while (temp->content != number)
 			temp = temp->next;
-		temp->toPush = 1;
+		temp->to_push = 1;
 		temp = temp->next;
 		while (1)
 		{
@@ -80,7 +80,7 @@ void	ft_set_topush(t_value *a, int number)
 		}
 		if (temp)
 		{
-			temp->toPush = 1;
+			temp->to_push = 1;
 			number = temp->content;
 		}
 	}	
@@ -95,7 +95,7 @@ void	ft_add_tob(t_value *a, t_value *b)
 	temp = a->lst;
 	while (sizelst > 0)
 	{
-		if (temp->toPush == 0)
+		if (temp->to_push == 0)
 		{
 			while (temp->content != a->lst->content)
 				ra(a, 1);

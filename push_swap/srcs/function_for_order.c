@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:35:38 by albrusso          #+#    #+#             */
-/*   Updated: 2023/01/30 17:32:23 by albrusso         ###   ########.fr       */
+/*   Updated: 2023/02/02 15:23:27 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_ft(t_value *a)
 	lst = a->lst;
 	while (lst)
 	{
-		lst->toPush = 0;
+		lst->to_push = 0;
 		lst = lst->next;
 	}
 }

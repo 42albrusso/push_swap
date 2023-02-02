@@ -6,7 +6,7 @@
 #    By: albrusso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 16:21:18 by albrusso          #+#    #+#              #
-#    Updated: 2023/02/01 18:15:46 by albrusso         ###   ########.fr        #
+#    Updated: 2023/02/02 16:03:59 by albrusso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ OBJ_MANDATORY	= $(SRCS_MANDATORY:.c=.o)
 OBJ_BONUS		= $(SRCS_BONUS_ONE:.c=.o) $(SRCS_BONUS_TWO:.c=.o) $(SRCS_BONUS_THREE:.c=.o)
 
 
-all: $(NAME_MANDATORY) bonus
+all: $(NAME_MANDATORY)
 
 $(NAME_MANDATORY): $(OBJ_MANDATORY)
 		  	cc $(FLAGS) $(OBJ_MANDATORY) -o $(NAME_MANDATORY)
